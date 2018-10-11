@@ -10,6 +10,7 @@
 puts "How many dice?"
 number = gets.to_i
 system 'cls' or 'clear'
+
 5.times do
   number.times do
     print "#{rand(6) + 1} "
@@ -20,6 +21,12 @@ end
 
 # С помощью мтеода целого числа times запускаем цикл, который заданное число раз
 # повторяет бросок кубика.
+sum = 0
 number.times do
-  print "#{rand(6) + 1} "
+  dice = rand(6) + 1
+  sum += dice
+  print "#{dice} "
 end
+
+puts
+puts  "sum of dices = #{sum}"
